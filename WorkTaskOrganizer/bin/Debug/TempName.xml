@@ -80,6 +80,10 @@ no</comment>
         <startWork>2020-12-06T02:10:00</startWork>
         <endWork>2020-12-06T03:15:00</endWork>
       </WorkProjectPrerioid>
+      <WorkProjectPrerioid>
+        <startWork>2020-12-06T02:10:00</startWork>
+        <endWork>0001-01-01T00:00:00</endWork>
+      </WorkProjectPrerioid>
     </workTime>
   </TaskTemplate>
   <TaskTemplate>
@@ -144,7 +148,7 @@ hełehehe</comment>
     <linkToJira>aaaaa</linkToJira>
     <createdDate>2020-12-07T00:00:00</createdDate>
     <deadline>2020-12-06T00:00:00</deadline>
-    <priority>3</priority>
+    <priority>4</priority>
     <catalogName>2020-12-06 (aaaa)</catalogName>
     <workTime />
   </TaskTemplate>
@@ -157,7 +161,7 @@ hełehehe</comment>
     <linkToJira>bbbb</linkToJira>
     <createdDate>2020-12-08T00:00:00</createdDate>
     <deadline>2020-12-06T00:00:00</deadline>
-    <priority>3</priority>
+    <priority>5</priority>
     <catalogName>2020-12-06 (bbbb)</catalogName>
     <workTime />
   </TaskTemplate>
@@ -170,8 +174,86 @@ hełehehe</comment>
     <linkToJira>ccccc</linkToJira>
     <createdDate>2020-12-09T00:00:00</createdDate>
     <deadline>2020-12-06T00:00:00</deadline>
-    <priority>3</priority>
+    <priority>2</priority>
     <catalogName>2020-12-06 (cccc)</catalogName>
+    <workTime />
+  </TaskTemplate>
+  <TaskTemplate>
+    <id>12</id>
+    <status>Not started</status>
+    <format>E1</format>
+    <taskName>NOT STARTED</taskName>
+    <comment />
+    <linkToJira>adsasd</linkToJira>
+    <createdDate>2020-12-06T00:00:00</createdDate>
+    <deadline>2020-12-06T00:00:00</deadline>
+    <priority>1</priority>
+    <catalogName>2020-12-06 (NOT STARTED)</catalogName>
+    <workTime />
+  </TaskTemplate>
+  <TaskTemplate>
+    <id>13</id>
+    <status>Open</status>
+    <format>E2</format>
+    <taskName>OPEN</taskName>
+    <comment />
+    <linkToJira>asd</linkToJira>
+    <createdDate>2020-12-06T00:00:00</createdDate>
+    <deadline>2020-12-06T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>2020-12-06 (OPEN)</catalogName>
+    <workTime />
+  </TaskTemplate>
+  <TaskTemplate>
+    <id>14</id>
+    <status>Closed</status>
+    <format>E2</format>
+    <taskName>Close</taskName>
+    <comment />
+    <linkToJira>asasdasd</linkToJira>
+    <createdDate>2020-12-06T00:00:00</createdDate>
+    <deadline>2020-12-06T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>2020-12-06 (Close)</catalogName>
+    <workTime />
+  </TaskTemplate>
+  <TaskTemplate>
+    <id>15</id>
+    <status>Question to PM</status>
+    <format>E2</format>
+    <taskName>Question</taskName>
+    <comment />
+    <linkToJira>asdasdasd</linkToJira>
+    <createdDate>2020-12-06T00:00:00</createdDate>
+    <deadline>2020-12-06T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>2020-12-06 (Question)</catalogName>
+    <workTime />
+  </TaskTemplate>
+  <TaskTemplate>
+    <id>16</id>
+    <status>On tests</status>
+    <format>E1</format>
+    <taskName>TEST</taskName>
+    <comment>d</comment>
+    <linkToJira>d</linkToJira>
+    <createdDate>2020-12-06T00:00:00</createdDate>
+    <deadline>2020-12-06T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>asd</catalogName>
+    <workTime />
+  </TaskTemplate>
+  <TaskTemplate>
+    <id>17</id>
+    <status>Reload on prod</status>
+    <format>E2</format>
+    <taskName>Reload</taskName>
+    <comment />
+    <linkToJira>sadfsdf</linkToJira>
+    <createdDate>2020-12-06T00:00:00</createdDate>
+    <deadline>2020-12-06T00:00:00</deadline>
+    <priority>1</priority>
+    <catalogName>2020-12-06 (Reload)</catalogName>
     <workTime />
   </TaskTemplate>
 </ArrayOfTaskTemplate>

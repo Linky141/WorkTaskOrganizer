@@ -1,19 +1,27 @@
 ﻿<Window x:Class="WorkTaskOrganizer.WorkTimeWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"   
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"      
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkTaskOrganizer"
         mc:Ignorable="d"
-        Title="WorkTimeWindow" Height="450" Width="400.67">
+        Title="WorkTimeWindow" Height="493.5" Width="400.67">
     <Grid>
         <Label Content="Work date" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="lbxStartHour" SelectionChanged="lbxStartHour_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="10,127,0,0" VerticalAlignment="Top" Width="77"/>
         <ListBox x:Name="lbxStartMinute" SelectionChanged="lbxStartMinute_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="92,127,0,0" VerticalAlignment="Top" Width="77"/>
         <Label Content="Hour" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
         <Label Content="Minute" HorizontalAlignment="Left" Margin="92,96,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="290,71,0,0" VerticalAlignment="Top" Width="29" Click="btnOk_Click"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="324,70,0,0" VerticalAlignment="Top" Width="53" Click="btnCancel_Click"/>
+        <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="10,421,0,0" VerticalAlignment="Top" Width="183" Click="btnOk_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="198,421,0,0" VerticalAlignment="Top" Width="179" Click="btnCancel_Click"/>
         <ListBox x:Name="lbxEndHour" SelectionChanged="lbxEndHour_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="198,127,0,0" VerticalAlignment="Top" Width="77"/>
         <ListBox x:Name="lbxEndMinute" SelectionChanged="lbxEndMinute_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="300,127,0,0" VerticalAlignment="Top" Width="77"/>
         <Label Content="Hour" HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top"/>

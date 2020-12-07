@@ -138,38 +138,69 @@ namespace WorkTaskOrganizer
         {
             DataGridRow row = new DataGridRow();
             row.Item = tt;
-            if (tt.status.Equals("Open")) row.Background = Brushes.LightYellow;
-            else if (tt.status.Equals("Closed")) row.Background = Brushes.LightGreen;
-            else if (tt.status.Equals("Not started")) row.Background = Brushes.Pink;
-            else if (tt.status.Equals("Question to PM")) row.Background = Brushes.MediumPurple;
-            else if (tt.status.Equals("On tests")) row.Background = Brushes.LightBlue;
-            else if (tt.status.Equals("Reload on prod")) row.Background = Brushes.SandyBrown;
-            if (tt.priority.Equals(1))
+            if (tt.status.Equals("Open")) row.Background = Brushes.DarkGoldenrod;
+            else if (tt.status.Equals("Closed")) row.Background = Brushes.Teal;
+            else if (tt.status.Equals("Not started")) row.Background = Brushes.Maroon;
+            else if (tt.status.Equals("Question to PM")) row.Background = Brushes.Indigo;
+            else if (tt.status.Equals("On tests")) row.Background = Brushes.Navy;
+            else if (tt.status.Equals("Reload on prod")) row.Background = Brushes.Purple;
+
+            int thickness = 5;
+            if(tt.priority.Equals(1))
             {
-                row.Foreground = Brushes.Red;
-                row.FontStyle = FontStyles.Italic;
+                row.BorderThickness = new Thickness(thickness, 0,0,0);
+                row.BorderBrush = Brushes.Magenta;
             }
             else if (tt.priority.Equals(2))
             {
-                row.Foreground = Brushes.Red;
+                row.BorderThickness = new Thickness(thickness, 0, 0, 0);
+                row.BorderBrush = Brushes.Red;
             }
+            else if (tt.priority.Equals(3))
+            {
+                row.BorderThickness = new Thickness(thickness, 0, 0, 0);
+                row.BorderBrush = Brushes.Yellow;
+            }
+            else if (tt.priority.Equals(4))
+            {
+                row.BorderThickness = new Thickness(thickness, 0, 0, 0);
+                row.BorderBrush = Brushes.LightGreen;
+            }
+            else if (tt.priority.Equals(5))
+            {
+                row.BorderThickness = new Thickness(thickness, 0, 0, 0);
+                row.BorderBrush = Brushes.LightBlue;
+            }
+
+            //if (tt.priority.Equals(1))
+            //{
+            //    row.Foreground = Brushes.Red;
+            //    row.FontStyle = FontStyles.Italic;
+            //}
+            //else if (tt.priority.Equals(2))
+            //{
+            //    row.Foreground = Brushes.Red;
+            //}
             dgTasks.Items.Add(row);
         }
       
         private void RefreshWorkTime()
         {
-            lbxWorkingTime.Items.Clear();
-            SumTimeRound str = new SumTimeRound();
-            foreach(WorkProjectPrerioid val in tasks[dgTasks.SelectedIndex].workTime)
+            if (dgTasks.SelectedItem != null)
             {
-                lbxWorkingTime.Items.Add(val.ToString());
-                if (val.CheckCompletePrerioid())
+                lbxWorkingTime.Items.Clear();
+                SumTimeRound str = new SumTimeRound();
+                foreach (WorkProjectPrerioid val in tasks[dgTasks.SelectedIndex].workTime)
                 {
-                    str.AddHour(val.getPrerioidHours());
-                    str.AddMin(val.getPrerioidMins());
+                    lbxWorkingTime.Items.Add(val.ToString());
+                    if (val.CheckCompletePrerioid())
+                    {
+                        str.AddHour(val.getPrerioidHours());
+                        str.AddMin(val.getPrerioidMins());
+                    }
                 }
+                lblSumTimeWork.Content = str.getDays() + "d" + str.getHours() + "h" + str.getMins() + "m";
             }
-            lblSumTimeWork.Content = str.getDays() + "d" + str.getHours() + "h" + str.getMins() + "m";
         }
 
 
@@ -204,26 +235,29 @@ namespace WorkTaskOrganizer
 
         private void btnEditTask_Click(object sender, RoutedEventArgs e)
         {
-            int selectedIndex = -2;
-            try
+            if (dgTasks.SelectedItem != null)
             {
-                int tmpSelectedIndexFromDG = dgTasks.SelectedIndex;
-                selectedIndex = SearchIDFormDG(dgTasks.Columns[0].GetCellContent(dgTasks.Items[dgTasks.SelectedIndex]) as TextBlock);
-                NewTaskForm newTaskFormWindow = new NewTaskForm(tasks[selectedIndex]);
-                newTaskFormWindow.ShowDialog();
-                if (newTaskFormWindow.ApplyChanges)
+                int selectedIndex = -2;
+                try
                 {
-                    tasks[selectedIndex] = newTaskFormWindow.simpleTask;
+                    int tmpSelectedIndexFromDG = dgTasks.SelectedIndex;
+                    selectedIndex = SearchIDFormDG(dgTasks.Columns[0].GetCellContent(dgTasks.Items[dgTasks.SelectedIndex]) as TextBlock);
+                    NewTaskForm newTaskFormWindow = new NewTaskForm(tasks[selectedIndex]);
+                    newTaskFormWindow.ShowDialog();
+                    if (newTaskFormWindow.ApplyChanges)
+                    {
+                        tasks[selectedIndex] = newTaskFormWindow.simpleTask;
+                    }
+                    Serialize();
+                    RefreshDataGrid();
+                    dgTasks.SelectedIndex = tmpSelectedIndexFromDG;
+                    //dgTasks_MouseDown(null, null);
+                    tbxComment.Text = tasks[selectedIndex].comment;
+                    tbxLinkToJira.Text = tasks[selectedIndex].linkToJira;
+                    RefreshWorkTime();
                 }
-                Serialize();
-                RefreshDataGrid();
-                dgTasks.SelectedIndex = tmpSelectedIndexFromDG;
-                //dgTasks_MouseDown(null, null);
-                tbxComment.Text = tasks[selectedIndex].comment;
-                tbxLinkToJira.Text = tasks[selectedIndex].linkToJira;
-                RefreshWorkTime();
+                catch (Exception exc) { MessageBox.Show(exc.Message + "\n\n" + selectedIndex.ToString()); }
             }
-            catch(Exception exc) { MessageBox.Show(exc.Message + "\n\n" + selectedIndex.ToString()); }
         }
 
         private void dgTasks_MouseDown(object sender, MouseButtonEventArgs e)
@@ -296,34 +330,43 @@ namespace WorkTaskOrganizer
 
         private void btnWorkTimeAdd_Click(object sender, RoutedEventArgs e)
         {
-            WorkTimeWindow workTimeWindow = new WorkTimeWindow();
-            workTimeWindow.ShowDialog();
-            if (workTimeWindow.ApplyChanges)
+            if (dgTasks.SelectedItem != null)
             {
-                tasks[dgTasks.SelectedIndex].workTime.Add(workTimeWindow.prerioid);
+                WorkTimeWindow workTimeWindow = new WorkTimeWindow();
+                workTimeWindow.ShowDialog();
+                if (workTimeWindow.ApplyChanges)
+                {
+                    tasks[dgTasks.SelectedIndex].workTime.Add(workTimeWindow.prerioid);
+                }
+                Serialize();
+                RefreshWorkTime();
             }
-            Serialize();
-            RefreshWorkTime();
         }
 
         private void btnWorkTimeEdit_Click(object sender, RoutedEventArgs e)
         {
-            int lbxWorkingTimeIndex = lbxWorkingTime.SelectedIndex;
-            WorkTimeWindow workTimeWindow = new WorkTimeWindow(tasks[dgTasks.SelectedIndex].workTime[lbxWorkingTimeIndex]);
-            workTimeWindow.ShowDialog();
-            if (workTimeWindow.ApplyChanges)
+            if (dgTasks.SelectedItem != null && lbxWorkingTime.SelectedItem != null)
             {
-                tasks[dgTasks.SelectedIndex].workTime[lbxWorkingTimeIndex] = workTimeWindow.prerioid;
+                int lbxWorkingTimeIndex = lbxWorkingTime.SelectedIndex;
+                WorkTimeWindow workTimeWindow = new WorkTimeWindow(tasks[dgTasks.SelectedIndex].workTime[lbxWorkingTimeIndex]);
+                workTimeWindow.ShowDialog();
+                if (workTimeWindow.ApplyChanges)
+                {
+                    tasks[dgTasks.SelectedIndex].workTime[lbxWorkingTimeIndex] = workTimeWindow.prerioid;
+                }
+                Serialize();
+                RefreshWorkTime();
             }
-            Serialize();
-            RefreshWorkTime();
         }
 
         private void btnWorkTimeRemove_Click(object sender, RoutedEventArgs e)
         {
-            tasks[dgTasks.SelectedIndex].workTime.RemoveAt(lbxWorkingTime.SelectedIndex);
-            Serialize();
-            RefreshWorkTime();
+            if (dgTasks.SelectedItem != null && lbxWorkingTime.SelectedItem != null)
+            {
+                tasks[dgTasks.SelectedIndex].workTime.RemoveAt(lbxWorkingTime.SelectedIndex);
+                Serialize();
+                RefreshWorkTime();
+            }
         }
 
         private void btnFiltr_Click(object sender, RoutedEventArgs e)

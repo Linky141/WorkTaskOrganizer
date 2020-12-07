@@ -17,3 +17,10 @@ C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\Wo
 C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\NewTaskForm.baml
 C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTimeWindow.g.cs
 C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTimeWindow.baml
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignColors.dll
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\App.baml
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.CopyComplete
