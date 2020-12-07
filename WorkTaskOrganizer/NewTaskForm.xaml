@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkTaskOrganizer"
         mc:Ignorable="d"
-        Title="---" Height="450" Width="800" x:Name="window">
+        Title="---" Height="455" Width="807" x:Name="window" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Task status" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbTaskStatusReloadOnProd" GroupName="TaskStatus" Content="Reload on prod" HorizontalAlignment="Left" Margin="11,150,0,0" VerticalAlignment="Top"/>

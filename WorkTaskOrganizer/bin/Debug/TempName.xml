@@ -193,13 +193,13 @@ hełehehe</comment>
   </TaskTemplate>
   <TaskTemplate>
     <id>13</id>
-    <status>Open</status>
+    <status>On tests</status>
     <format>E2</format>
     <taskName>OPEN</taskName>
     <comment />
     <linkToJira>asd</linkToJira>
     <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
+    <deadline>2020-12-07T00:00:00</deadline>
     <priority>3</priority>
     <catalogName>2020-12-06 (OPEN)</catalogName>
     <workTime />
@@ -219,7 +219,7 @@ hełehehe</comment>
   </TaskTemplate>
   <TaskTemplate>
     <id>15</id>
-    <status>Question to PM</status>
+    <status>Closed</status>
     <format>E2</format>
     <taskName>Question</taskName>
     <comment />
@@ -238,7 +238,7 @@ hełehehe</comment>
     <comment>d</comment>
     <linkToJira>d</linkToJira>
     <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
+    <deadline>2020-12-09T00:00:00</deadline>
     <priority>3</priority>
     <catalogName>asd</catalogName>
     <workTime />
@@ -251,7 +251,7 @@ hełehehe</comment>
     <comment />
     <linkToJira>sadfsdf</linkToJira>
     <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
+    <deadline>2020-12-16T00:00:00</deadline>
     <priority>1</priority>
     <catalogName>2020-12-06 (Reload)</catalogName>
     <workTime />

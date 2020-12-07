@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkTaskOrganizer"
         mc:Ignorable="d"
-        Title="WorkTimeWindow" Height="493.5" Width="400.67">
+        Title="WorkTimeWindow" Height="499.5" Width="400.67" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Work date" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="lbxStartHour" SelectionChanged="lbxStartHour_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="10,127,0,0" VerticalAlignment="Top" Width="77"/>

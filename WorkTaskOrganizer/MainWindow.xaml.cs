@@ -149,12 +149,12 @@ namespace WorkTaskOrganizer
             if(tt.priority.Equals(1))
             {
                 row.BorderThickness = new Thickness(thickness, 0,0,0);
-                row.BorderBrush = Brushes.Magenta;
+                row.BorderBrush = Brushes.Red;
             }
             else if (tt.priority.Equals(2))
             {
                 row.BorderThickness = new Thickness(thickness, 0, 0, 0);
-                row.BorderBrush = Brushes.Red;
+                row.BorderBrush = Brushes.Magenta;
             }
             else if (tt.priority.Equals(3))
             {
@@ -170,6 +170,28 @@ namespace WorkTaskOrganizer
             {
                 row.BorderThickness = new Thickness(thickness, 0, 0, 0);
                 row.BorderBrush = Brushes.LightBlue;
+            }
+
+          
+            
+
+            Color taskColor = Color.FromRgb(0,0,0);
+            if (tt.status.Equals("Open")) taskColor = Color.FromRgb(184,134,11);
+            else if (tt.status.Equals("Closed")) taskColor = Color.FromRgb(0,128,128);
+            else if (tt.status.Equals("Not started")) taskColor = Color.FromRgb(128,0,0);
+            else if (tt.status.Equals("Question to PM")) taskColor = Color.FromRgb(75,0,130);
+            else if (tt.status.Equals("On tests")) taskColor = Color.FromRgb(0,0,128);
+            else if (tt.status.Equals("Reload on prod")) taskColor = Color.FromRgb(128,0,128);
+            Point startGradient = new Point(0, 0);
+            Point endGradient = new Point(0.1, 0);
+
+            if (tt.deadline < DateTime.Today && !tt.status.Equals("Closed"))
+            {
+                row.Background = new LinearGradientBrush(Color.FromRgb(190, 0, 0), taskColor, startGradient, endGradient);
+            }
+            else if (tt.deadline.AddDays(-2) < DateTime.Today && !tt.status.Equals("Closed"))
+            {
+                row.Background = new LinearGradientBrush(Color.FromRgb(190, 190, 0), taskColor, startGradient, endGradient);
             }
 
             //if (tt.priority.Equals(1))
@@ -401,12 +423,71 @@ namespace WorkTaskOrganizer
 
             tbxFiltrFormat.Text = "";
             tbxFiltrTaskName.Text = "";
-            calFilterCreationDateBegin.SelectedDate = DateTime.MinValue;
-            calFilterCreationDateFinish.SelectedDate = DateTime.MinValue;
-            calFiltrDaedlineBegin.SelectedDate = DateTime.MinValue;
-            calFiltrDaedlineFinish.SelectedDate = DateTime.MinValue;
+            calFilterCreationDateBegin.SelectedDate = DateTime.Today;
+            calFilterCreationDateFinish.SelectedDate = DateTime.Today;
+            calFiltrDaedlineBegin.SelectedDate = DateTime.Today;
+            calFiltrDaedlineFinish.SelectedDate = DateTime.Today;
         }
 
+        private void btnFiltrCreationDateFromMax_Click(object sender, RoutedEventArgs e)
+        {
+            calFilterCreationDateBegin.SelectedDate = DateTime.MaxValue;
+        }
+
+        private void btnFiltrCreationDateFromToday_Click(object sender, RoutedEventArgs e)
+        {
+            calFilterCreationDateBegin.SelectedDate = DateTime.Today;
+        }
+
+        private void btnFiltrCreationDateFromMin_Click(object sender, RoutedEventArgs e)
+        {
+            calFilterCreationDateBegin.SelectedDate = DateTime.MinValue;
+        }
+
+        private void btnFiltrCreationDateToMax_Click(object sender, RoutedEventArgs e)
+        {
+            calFilterCreationDateFinish.SelectedDate = DateTime.MaxValue;
+        }
+
+        private void btnFiltrCreationDateToToday_Click(object sender, RoutedEventArgs e)
+        {
+            calFilterCreationDateFinish.SelectedDate = DateTime.Today;
+        }
+
+        private void btnFiltrCreationDateToMin_Click(object sender, RoutedEventArgs e)
+        {
+            calFilterCreationDateFinish.SelectedDate = DateTime.MinValue;
+        }
+
+        private void btnFiltrDeadlineFromMax_Click(object sender, RoutedEventArgs e)
+        {
+            calFiltrDaedlineBegin.SelectedDate = DateTime.MaxValue;
+        }
+
+        private void btnFiltrDeadlineFromToday_Click(object sender, RoutedEventArgs e)
+        {
+            calFiltrDaedlineBegin.SelectedDate = DateTime.Today;
+        }
+
+        private void btnFiltrDeadlineFromMin_Click(object sender, RoutedEventArgs e)
+        {
+            calFiltrDaedlineBegin.SelectedDate = DateTime.MinValue;
+        }
+
+        private void btnFiltrDeadlineToMax_Click(object sender, RoutedEventArgs e)
+        {
+            calFiltrDaedlineFinish.SelectedDate = DateTime.MaxValue;
+        }
+
+        private void btnFiltrDeadlineToToday_Click(object sender, RoutedEventArgs e)
+        {
+            calFiltrDaedlineFinish.SelectedDate = DateTime.Today;
+        }
+
+        private void btnFiltrDeadlineToMin_Click(object sender, RoutedEventArgs e)
+        {
+            calFiltrDaedlineFinish.SelectedDate = DateTime.MinValue;
+        }
 
         #endregion
 
