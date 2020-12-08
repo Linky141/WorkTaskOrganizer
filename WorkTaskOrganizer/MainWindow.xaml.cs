@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -28,6 +29,7 @@ namespace WorkTaskOrganizer
         #region Variables
         public List<TaskTemplate> tasks = new List<TaskTemplate>();
         private bool filtering = false;
+        private string WindowName = "TaskWorkOrganizer v.1.2";
         #endregion
 
 
@@ -38,6 +40,7 @@ namespace WorkTaskOrganizer
             DeSerialize();
             RefreshDataGrid();
             btnClearFiltr_Click(null, null);
+            mainWindow.Title = WindowName;
         }
 
         #endregion
@@ -138,12 +141,13 @@ namespace WorkTaskOrganizer
         {
             DataGridRow row = new DataGridRow();
             row.Item = tt;
-            if (tt.status.Equals("Open")) row.Background = Brushes.DarkGoldenrod;
-            else if (tt.status.Equals("Closed")) row.Background = Brushes.Teal;
-            else if (tt.status.Equals("Not started")) row.Background = Brushes.Maroon;
-            else if (tt.status.Equals("Question to PM")) row.Background = Brushes.Indigo;
-            else if (tt.status.Equals("On tests")) row.Background = Brushes.Navy;
-            else if (tt.status.Equals("Reload on prod")) row.Background = Brushes.Purple;
+            //if (tt.status.Equals("Open")) row.Background = Brushes.DarkGoldenrod;
+            //else if (tt.status.Equals("Closed")) row.Background = Brushes.Teal;
+            ////else if (tt.status.Equals("Not started")) row.Background = Brushes.Maroon;
+            //else if (tt.status.Equals("Not started")) row.Background = new SolidColorBrush(Color.FromRgb(64, 64, 0));
+            //else if (tt.status.Equals("Question to PM")) row.Background = Brushes.Indigo;
+            //else if (tt.status.Equals("On tests")) row.Background = Brushes.Navy;
+            //else if (tt.status.Equals("Reload on prod")) row.Background = Brushes.Purple;
 
             int thickness = 5;
             if(tt.priority.Equals(1))
@@ -176,12 +180,12 @@ namespace WorkTaskOrganizer
             
 
             Color taskColor = Color.FromRgb(0,0,0);
-            if (tt.status.Equals("Open")) taskColor = Color.FromRgb(184,134,11);
-            else if (tt.status.Equals("Closed")) taskColor = Color.FromRgb(0,128,128);
-            else if (tt.status.Equals("Not started")) taskColor = Color.FromRgb(128,0,0);
-            else if (tt.status.Equals("Question to PM")) taskColor = Color.FromRgb(75,0,130);
-            else if (tt.status.Equals("On tests")) taskColor = Color.FromRgb(0,0,128);
-            else if (tt.status.Equals("Reload on prod")) taskColor = Color.FromRgb(128,0,128);
+            if (tt.status.Equals("Open")) taskColor = Color.FromRgb(64,0,0);
+            else if (tt.status.Equals("Closed")) taskColor = Color.FromRgb(0,64,0);
+            else if (tt.status.Equals("Not started")) taskColor = Color.FromRgb(64,64,64);
+            else if (tt.status.Equals("Question to PM")) taskColor = Color.FromRgb(0,64,64);
+            else if (tt.status.Equals("On tests")) taskColor = Color.FromRgb(0,0,64);
+            else if (tt.status.Equals("Reload on prod")) taskColor = Color.FromRgb(64,64,0);
             Point startGradient = new Point(0, 0);
             Point endGradient = new Point(0.1, 0);
 
@@ -192,6 +196,18 @@ namespace WorkTaskOrganizer
             else if (tt.deadline.AddDays(-2) < DateTime.Today && !tt.status.Equals("Closed"))
             {
                 row.Background = new LinearGradientBrush(Color.FromRgb(190, 190, 0), taskColor, startGradient, endGradient);
+            }
+            else if (tt.deadline.AddDays(-5) < DateTime.Today && !tt.status.Equals("Closed"))
+            {
+                row.Background = new LinearGradientBrush(Color.FromRgb(0, 190, 0), taskColor, startGradient, endGradient);
+            }
+            else if ( !tt.status.Equals("Closed"))
+            {
+                row.Background = new LinearGradientBrush(Color.FromRgb(0, 0, 190), taskColor, startGradient, endGradient);
+            }
+            else
+            {
+                row.Background = new SolidColorBrush(taskColor);
             }
 
             //if (tt.priority.Equals(1))
@@ -276,6 +292,7 @@ namespace WorkTaskOrganizer
                     //dgTasks_MouseDown(null, null);
                     tbxComment.Text = tasks[selectedIndex].comment;
                     tbxLinkToJira.Text = tasks[selectedIndex].linkToJira;
+                    tbxcatalogPath.Text = tasks[selectedIndex].catalogPath;
                     RefreshWorkTime();
                 }
                 catch (Exception exc) { MessageBox.Show(exc.Message + "\n\n" + selectedIndex.ToString()); }
@@ -290,6 +307,8 @@ namespace WorkTaskOrganizer
                 index = SearchIDFormDG(dgTasks.Columns[0].GetCellContent(dgTasks.Items[dgTasks.SelectedIndex]) as TextBlock);
                 tbxComment.Text = tasks[index].comment;
                 tbxLinkToJira.Text = tasks[index].linkToJira;
+                tbxcatalogPath.Text = tasks[index].catalogPath;
+                mainWindow.Title = WindowName + " (" + tasks[index].taskName + ")";
                 RefreshWorkTime();
             }
             catch(Exception exc)
@@ -489,8 +508,25 @@ namespace WorkTaskOrganizer
             calFiltrDaedlineFinish.SelectedDate = DateTime.MinValue;
         }
 
+
         #endregion
 
+        private void btnOpenCatalogPath_Click(object sender, RoutedEventArgs e)
+        {
+            if (Directory.Exists(tbxcatalogPath.Text))
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    Arguments = tbxcatalogPath.Text,
+                    FileName = "explorer.exe"
+            };
 
+            Process.Start(startInfo);
+        }
+    else
+    {
+        MessageBox.Show(string.Format("{0} Directory does not exist!", tbxcatalogPath.Text));
+    }
+}
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -100,6 +101,7 @@ namespace WorkTaskOrganizer
             calDeadline.SelectedDate = simpleTask.deadline;
 
             tbxComent.Text = simpleTask.comment;
+            tbxCatalogPath.Text = simpleTask.catalogPath;
 
         }
 
@@ -114,8 +116,8 @@ namespace WorkTaskOrganizer
 
             if (listTimeWorkToEdit != null)
                 simpleTask.workTime = listTimeWorkToEdit;
-            
-            //Task status filling
+
+            #region Task status filling
             if (rbTaskStatusNotStarted.IsChecked.Equals(true))
                 simpleTask.status = "Not started";
             else if (rbTaskStatusOpen.IsChecked.Equals(true))
@@ -128,8 +130,9 @@ namespace WorkTaskOrganizer
                 simpleTask.status = "On tests";
             else if (rbTaskStatusReloadOnProd.IsChecked.Equals(true))
                 simpleTask.status = "Reload on prod";
+            #endregion
 
-            //Priority filling
+            # region Priority filling
             if (rbTaskPriority1.IsChecked.Equals(true))
                 simpleTask.priority = 1;
             else if (rbTaskPriority2.IsChecked.Equals(true))
@@ -140,8 +143,9 @@ namespace WorkTaskOrganizer
                 simpleTask.priority = 4;
             else if (rbTaskPriority5.IsChecked.Equals(true))
                 simpleTask.priority = 5;
+            #endregion
 
-            //Format filling
+            #region Format filling
             if (rbTaskFormatE1.IsChecked.Equals(true))
                 simpleTask.format = "E1";
             else if (rbTaskFormatE2.IsChecked.Equals(true))
@@ -156,8 +160,9 @@ namespace WorkTaskOrganizer
                     MessageBox.Show("Empty field:\nFormat -> Another");
                     return;
                 }
+            #endregion
 
-            //Task name filling
+            #region Task name filling
             if (!String.IsNullOrEmpty(tbxTaskName.Text))
                 simpleTask.taskName = tbxTaskName.Text;
             else
@@ -165,8 +170,9 @@ namespace WorkTaskOrganizer
                 MessageBox.Show("Empty field:\nTask name");
                 return;
             }
+            #endregion
 
-            //Link to jira filling
+            #region Link to jira filling
             if (!String.IsNullOrEmpty(tbxLinkToJira.Text))
                 simpleTask.linkToJira = tbxLinkToJira.Text;
             else
@@ -174,8 +180,9 @@ namespace WorkTaskOrganizer
                 MessageBox.Show("Empty field:\nLink to jira");
                 return;
             }
+            #endregion
 
-            //Task name filling
+            #region Catalog name filling
             if (!String.IsNullOrEmpty(tbxCatalogName.Text))
                 simpleTask.catalogName = tbxCatalogName.Text;
             else
@@ -183,15 +190,30 @@ namespace WorkTaskOrganizer
                 MessageBox.Show("Empty field:\nCatalog name");
                 return;
             }
+            #endregion
 
-            //Creation date filling
+            #region Creation date filling
             simpleTask.createdDate = calCreationDate.SelectedDate.GetValueOrDefault();
+            #endregion
 
-            //Deadline filling
+            #region Deadline filling
             simpleTask.deadline = calDeadline.SelectedDate.GetValueOrDefault();
+            #endregion
 
-            //comment filling
+            #region comment filling
             simpleTask.comment = tbxComent.Text;
+            #endregion
+
+            #region Catalog path filling
+            if (!String.IsNullOrEmpty(tbxCatalogPath.Text))
+                simpleTask.catalogPath = tbxCatalogPath.Text;
+            else
+            {
+                MessageBox.Show("Empty field:\nCatalog path");
+                return;
+            }
+            #endregion 
+
 
             simpleTask.id = ID;
 
@@ -220,8 +242,54 @@ namespace WorkTaskOrganizer
                 tbxFormatAnother.IsEnabled = true;
         }
 
+
         #endregion
 
+        private void btnCatalogPathAuto_Click(object sender, RoutedEventArgs e)
+        {
+            if(!File.Exists("WorkspacePath.txt"))
+            {
+                File.Create("WorkspacePath.txt");
+                MessageBox.Show("Created file with path.\nPlease fill it with path to your workspace");
+            }
 
+            if (!String.IsNullOrEmpty(tbxCatalogName.Text))
+            {
+                try
+                {
+                    using (var sr = new StreamReader("WorkspacePath.txt"))
+                    {
+                        tbxCatalogPath.Text = sr.ReadLine();
+                    }
+                }
+                catch (IOException exc)
+                {
+                    Console.WriteLine("Can not read path from file\n\n" + exc.Message);
+                    return;
+                }
+
+                tbxCatalogPath.Text += "\\" + tbxCatalogName.Text;
+
+                if (chkbxCreateCatalogInPath.IsChecked.Equals(true))
+                {
+                    try
+                    {
+                        if (!Directory.Exists(tbxCatalogPath.Text))
+                        {
+                            Directory.CreateDirectory(tbxCatalogPath.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Catalog:\n" + tbxCatalogPath.Text + "\nalredy exists!");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Can not to create catalog\n\n" + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }

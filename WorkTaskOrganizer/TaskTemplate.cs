@@ -19,6 +19,7 @@ namespace WorkTaskOrganizer
             this.deadline = DateTime.Now;
             this.priority = 0;
             this.catalogName = "";
+            this.catalogPath = "";
             this.workTime = new List<WorkProjectPrerioid>();
 
         }
@@ -33,6 +34,7 @@ namespace WorkTaskOrganizer
         public DateTime deadline { get; set; }
         public int priority { get; set; }
         public string catalogName { get; set; }
+        public string catalogPath { get; set; }
         public List<WorkProjectPrerioid> workTime { get; set; }
 
     }
