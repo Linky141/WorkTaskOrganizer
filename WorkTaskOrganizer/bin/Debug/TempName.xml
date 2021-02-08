@@ -15,8 +15,13 @@ gfddg</comment>
     <deadline>2020-12-06T00:00:00</deadline>
     <priority>2</priority>
     <catalogName>2020-12-06 (Task1)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2020-12-06 (Task1)</catalogPath>
-    <workTime />
+    <catalogPath>C:\Windows\</catalogPath>
+    <workTime>
+      <WorkProjectPrerioid>
+        <startWork>2021-02-09T03:10:00</startWork>
+        <endWork>2021-02-09T04:15:00</endWork>
+      </WorkProjectPrerioid>
+    </workTime>
   </TaskTemplate>
   <TaskTemplate>
     <id>2</id>
@@ -38,7 +43,12 @@ d</comment>
     <priority>1</priority>
     <catalogName>2020-12-06 (Task2)</catalogName>
     <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\2020-12-06 (Task2)</catalogPath>
-    <workTime />
+    <workTime>
+      <WorkProjectPrerioid>
+        <startWork>2021-02-09T01:05:00</startWork>
+        <endWork>2021-02-09T19:10:00</endWork>
+      </WorkProjectPrerioid>
+    </workTime>
   </TaskTemplate>
   <TaskTemplate>
     <id>3</id>
@@ -299,6 +309,20 @@ hełehehe</comment>
     <priority>2</priority>
     <catalogName>2020-12-08 (EDIPL-12345)</catalogName>
     <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2020-12-08 (EDIPL-12345)</catalogPath>
+    <workTime />
+  </TaskTemplate>
+  <TaskTemplate>
+    <id>20</id>
+    <status>Not started</status>
+    <format />
+    <taskName>asd</taskName>
+    <comment />
+    <linkToJira>asd</linkToJira>
+    <createdDate>2021-02-08T00:00:00</createdDate>
+    <deadline>2021-02-08T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>2021-02-08 (asd)</catalogName>
+    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2021-02-08 (asd)</catalogPath>
     <workTime />
   </TaskTemplate>
 </ArrayOfTaskTemplate>

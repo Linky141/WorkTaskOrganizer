@@ -69,81 +69,16 @@ namespace WorkTaskOrganizer
 
         private void FillAllHourListBox()
         {
-            lbxStartHour.Items.Add("0");
-            lbxStartHour.Items.Add("1");
-            lbxStartHour.Items.Add("2");
-            lbxStartHour.Items.Add("3");
-            lbxStartHour.Items.Add("4");
-            lbxStartHour.Items.Add("5");
-            lbxStartHour.Items.Add("6");
-            lbxStartHour.Items.Add("7");
-            lbxStartHour.Items.Add("8");
-            lbxStartHour.Items.Add("9");
-            lbxStartHour.Items.Add("10");
-            lbxStartHour.Items.Add("11");
-            lbxStartHour.Items.Add("12");
-            lbxStartHour.Items.Add("13");
-            lbxStartHour.Items.Add("14");
-            lbxStartHour.Items.Add("15");
-            lbxStartHour.Items.Add("16");
-            lbxStartHour.Items.Add("17");
-            lbxStartHour.Items.Add("18");
-            lbxStartHour.Items.Add("19");
-            lbxStartHour.Items.Add("20");
-            lbxStartHour.Items.Add("21");
-            lbxStartHour.Items.Add("22");
-            lbxStartHour.Items.Add("23");
-
-            lbxEndHour.Items.Add("0");
-            lbxEndHour.Items.Add("1");
-            lbxEndHour.Items.Add("2");
-            lbxEndHour.Items.Add("3");
-            lbxEndHour.Items.Add("4");
-            lbxEndHour.Items.Add("5");
-            lbxEndHour.Items.Add("6");
-            lbxEndHour.Items.Add("7");
-            lbxEndHour.Items.Add("8");
-            lbxEndHour.Items.Add("9");
-            lbxEndHour.Items.Add("10");
-            lbxEndHour.Items.Add("11");
-            lbxEndHour.Items.Add("12");
-            lbxEndHour.Items.Add("13");
-            lbxEndHour.Items.Add("14");
-            lbxEndHour.Items.Add("15");
-            lbxEndHour.Items.Add("16");
-            lbxEndHour.Items.Add("17");
-            lbxEndHour.Items.Add("18");
-            lbxEndHour.Items.Add("19");
-            lbxEndHour.Items.Add("20");
-            lbxEndHour.Items.Add("21");
-            lbxEndHour.Items.Add("22");
-            lbxEndHour.Items.Add("23");
-
-            lbxStartMinute.Items.Add("0");
-            lbxStartMinute.Items.Add("5");
-            lbxStartMinute.Items.Add("10");
-            lbxStartMinute.Items.Add("15");
-            lbxStartMinute.Items.Add("20");
-            lbxStartMinute.Items.Add("25");
-            lbxStartMinute.Items.Add("30");
-            lbxStartMinute.Items.Add("35");
-            lbxStartMinute.Items.Add("40");
-            lbxStartMinute.Items.Add("45");
-            lbxStartMinute.Items.Add("50");
-            lbxStartMinute.Items.Add("55");
-
-            lbxEndMinute.Items.Add("0");
-            lbxEndMinute.Items.Add("5");
-            lbxEndMinute.Items.Add("10");
-            lbxEndMinute.Items.Add("15");
-            lbxEndMinute.Items.Add("20");
-            lbxEndMinute.Items.Add("25");
-            lbxEndMinute.Items.Add("30");
-            lbxEndMinute.Items.Add("35");
-            lbxEndMinute.Items.Add("40");
-            lbxEndMinute.Items.Add("45");
-            lbxEndMinute.Items.Add("50");
-            lbxEndMinute.Items.Add("55");
+            for(int clk = 0; clk < 24; clk++)
+            {
+                lbxStartHour.Items.Add(clk.ToString());
+                lbxEndHour.Items.Add(clk.ToString());
+            }
+            for (int clk = 0; clk <= 55; clk+=5)
+            {
+                lbxStartMinute.Items.Add(clk.ToString());
+                lbxEndMinute.Items.Add(clk.ToString());
+            }         
         }
 
         #endregion

@@ -26,6 +26,7 @@ namespace WorkTaskOrganizer
         public bool ApplyChanges = false;
         List<WorkProjectPrerioid> listTimeWorkToEdit = null;
         public int ID = -1;
+        scripts sc = new scripts();
         #endregion
 
         #region constructor
@@ -245,28 +246,14 @@ namespace WorkTaskOrganizer
 
         #endregion
 
+
+      
+
         private void btnCatalogPathAuto_Click(object sender, RoutedEventArgs e)
         {
-            if(!File.Exists("WorkspacePath.txt"))
-            {
-                File.Create("WorkspacePath.txt");
-                MessageBox.Show("Created file with path.\nPlease fill it with path to your workspace");
-            }
-
             if (!String.IsNullOrEmpty(tbxCatalogName.Text))
             {
-                try
-                {
-                    using (var sr = new StreamReader("WorkspacePath.txt"))
-                    {
-                        tbxCatalogPath.Text = sr.ReadLine();
-                    }
-                }
-                catch (IOException exc)
-                {
-                    Console.WriteLine("Can not read path from file\n\n" + exc.Message);
-                    return;
-                }
+                tbxCatalogPath.Text = sc.SearchInFile("Workspace path");
 
                 tbxCatalogPath.Text += "\\" + tbxCatalogName.Text;
 

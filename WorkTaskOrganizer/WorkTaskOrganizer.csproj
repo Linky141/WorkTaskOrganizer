@@ -69,6 +69,7 @@
     <Compile Include="NewTaskForm.xaml.cs">
       <DependentUpon>NewTaskForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="scripts.cs" />
     <Compile Include="SumTimeRound.cs" />
     <Compile Include="TaskTemplate.cs" />
     <Compile Include="WorkProjectPrerioid.cs" />

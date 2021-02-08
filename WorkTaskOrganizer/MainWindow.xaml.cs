@@ -30,6 +30,7 @@ namespace WorkTaskOrganizer
         public List<TaskTemplate> tasks = new List<TaskTemplate>();
         private bool filtering = false;
         private string WindowName = "TaskWorkOrganizer v.1.2";
+        scripts sc = new scripts();
         #endregion
 
 
@@ -41,6 +42,11 @@ namespace WorkTaskOrganizer
             RefreshDataGrid();
             btnClearFiltr_Click(null, null);
             mainWindow.Title = WindowName;
+            if (!File.Exists("Config.txt"))
+            {
+                File.WriteAllText("Config.txt", "Workspace path:\n\nDefault explorer:\nexplorer.exe");
+                MessageBox.Show("Created config file, please edit this.");                
+            }
         }
 
         #endregion
@@ -224,11 +230,14 @@ namespace WorkTaskOrganizer
       
         private void RefreshWorkTime()
         {
+            int selectedIndex = -2;
             if (dgTasks.SelectedItem != null)
             {
+                int tmpSelectedIndexFromDG = dgTasks.SelectedIndex;
+                selectedIndex = SearchIDFormDG(dgTasks.Columns[0].GetCellContent(dgTasks.Items[dgTasks.SelectedIndex]) as TextBlock);
                 lbxWorkingTime.Items.Clear();
                 SumTimeRound str = new SumTimeRound();
-                foreach (WorkProjectPrerioid val in tasks[dgTasks.SelectedIndex].workTime)
+                foreach (WorkProjectPrerioid val in tasks[selectedIndex].workTime)
                 {
                     lbxWorkingTime.Items.Add(val.ToString());
                     if (val.CheckCompletePrerioid())
@@ -266,7 +275,6 @@ namespace WorkTaskOrganizer
             newTaskFormWindow.ShowDialog();
             if (newTaskFormWindow.ApplyChanges)
                 tasks.Add(newTaskFormWindow.simpleTask);
-            //TODO dodać obecny czas jako startowanie pracy nad taskiem
             Serialize();
             RefreshDataGrid();
         }
@@ -518,8 +526,8 @@ namespace WorkTaskOrganizer
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
                     Arguments = tbxcatalogPath.Text,
-                    FileName = "explorer.exe"
-            };
+                    FileName = sc.SearchInFile("Default explorer")
+                };
 
             Process.Start(startInfo);
         }

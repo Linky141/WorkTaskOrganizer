@@ -1,0 +1,4 @@
+Workspace path:
+C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace
+Default explorer:
+C:\Program Files\Q-Dir\Q-Dir.exe
