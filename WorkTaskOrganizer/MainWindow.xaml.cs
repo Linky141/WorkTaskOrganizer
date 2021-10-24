@@ -233,8 +233,8 @@ namespace WorkTaskOrganizer
             int selectedIndex = -2;
             if (dgTasks.SelectedItem != null)
             {
-                int tmpSelectedIndexFromDG = dgTasks.SelectedIndex;
-                selectedIndex = SearchIDFormDG(dgTasks.Columns[0].GetCellContent(dgTasks.Items[dgTasks.SelectedIndex]) as TextBlock);
+                //selectedIndex = SearchIDFormDG(dgTasks.Columns[0].GetCellContent(dgTasks.Items[dgTasks.SelectedIndex]) as TextBlock);
+                selectedIndex = dgTasks.SelectedIndex;
                 lbxWorkingTime.Items.Clear();
                 SumTimeRound str = new SumTimeRound();
                 foreach (WorkProjectPrerioid val in tasks[selectedIndex].workTime)

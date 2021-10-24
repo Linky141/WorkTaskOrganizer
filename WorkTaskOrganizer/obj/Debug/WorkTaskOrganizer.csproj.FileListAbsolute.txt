@@ -24,3 +24,29 @@ C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\Wo
 C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\App.baml
 C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.CopyComplete
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\WorkTaskOrganizer.exe.config
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\WorkTaskOrganizer.exe
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\WorkTaskOrganizer.pdb
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignColors.dll
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignColors.pdb
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csprojAssemblyReference.cache
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\MainWindow.g.cs
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\NewTaskForm.g.cs
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTimeWindow.g.cs
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\App.g.cs
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer_MarkupCompile.cache
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer_MarkupCompile.lref
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\App.baml
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\MainWindow.baml
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\NewTaskForm.baml
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTimeWindow.baml
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.g.resources
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.Properties.Resources.resources
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.GenerateResource.cache
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.CoreCompileInputs.cache
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.CopyComplete
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.exe
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.pdb
