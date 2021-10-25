@@ -381,4 +381,18 @@ hełehehe</comment>
       </WorkProjectPrerioid>
     </workTime>
   </TaskTemplate>
+  <TaskTemplate>
+    <id>23</id>
+    <status>Not started</status>
+    <format>E2</format>
+    <taskName>asd</taskName>
+    <comment />
+    <linkToJira>asd</linkToJira>
+    <createdDate>2021-10-25T00:00:00</createdDate>
+    <deadline>2021-10-25T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>2021-10-25 (asd)</catalogName>
+    <catalogPath>C:\Users\tomas\Desktop\Nowyfolder\2021-10-25 (asd)</catalogPath>
+    <workTime />
+  </TaskTemplate>
 </ArrayOfTaskTemplate>

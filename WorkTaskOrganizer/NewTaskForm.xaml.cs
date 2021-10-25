@@ -243,11 +243,15 @@ namespace WorkTaskOrganizer
                 tbxFormatAnother.IsEnabled = true;
         }
 
-
+        private void window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+            this.DragMove();
+        }
         #endregion
 
 
-      
+
 
         private void btnCatalogPathAuto_Click(object sender, RoutedEventArgs e)
         {
@@ -278,5 +282,7 @@ namespace WorkTaskOrganizer
                 }
             }
         }
+
+
     }
 }

@@ -29,7 +29,7 @@ namespace WorkTaskOrganizer
         #region Variables
         public List<TaskTemplate> tasks = new List<TaskTemplate>();
         private bool filtering = false;
-        private string WindowName = "TaskWorkOrganizer v.1.2";
+        private string WindowName = "TaskWorkOrganizer v.2.1";
         scripts sc = new scripts();
         #endregion
 
@@ -525,7 +525,7 @@ namespace WorkTaskOrganizer
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
-                    Arguments = tbxcatalogPath.Text,
+                    Arguments = $"\"{tbxcatalogPath.Text}\"",
                     FileName = sc.SearchInFile("Default explorer")
                 };
 

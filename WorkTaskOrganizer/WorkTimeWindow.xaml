@@ -14,7 +14,7 @@
         xmlns:local="clr-namespace:WorkTaskOrganizer"
         mc:Ignorable="d"
         Title="WorkTimeWindow" Height="468.594" Width="388.141" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
-        Background="Transparent" AllowsTransparency="True" WindowStyle="None">
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" Mouse.MouseDown="window_MouseDown">
     <Border Background="{DynamicResource MaterialDesignPaper}" CornerRadius="10" BorderThickness="1" BorderBrush="#eeee">
     <Grid>
         <Label Content="Work date" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>

@@ -139,6 +139,12 @@ namespace WorkTaskOrganizer
             ApplyChanges = false;
             this.Close();
         }
+
+        private void window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+            this.DragMove();
+        }
         #endregion
 
         private void lbxStartHour_SelectionChanged(object sender, SelectionChangedEventArgs e)
