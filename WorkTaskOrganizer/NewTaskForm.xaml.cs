@@ -21,15 +21,22 @@ namespace WorkTaskOrganizer
     /// </summary>
     public partial class NewTaskForm : Window
     {
-        #region variables
+        #region VARIABLES
+
         public TaskTemplate simpleTask = new TaskTemplate();
         public bool ApplyChanges = false;
         List<WorkProjectPrerioid> listTimeWorkToEdit = null;
         public int ID = -1;
-        scripts sc = new scripts();
+        string configFileName = "Config.txt";
+        private string defaultAnotherFormat = "?";
+        private string defaultTaskName = "UNNAMED_TASK";
+        private string defaultLinkToJira = "NO_LINK_TO_JIRA";
+        private string defaultCatalogName = "NO_CATALOG_NAME";
+        private string defaultCatalogPath = "NO_CATALOG_PATH";
         #endregion
 
-        #region constructor
+        #region CONSTRUCTOR
+
         public NewTaskForm(int lastID)
         {
             InitializeComponent();
@@ -51,10 +58,11 @@ namespace WorkTaskOrganizer
             this.listTimeWorkToEdit = taskToEdit.workTime;
             this.FillAllFields();
         }
+
         #endregion
 
+        #region METHODS
 
-        #region regular methods
         private void FillAllFields()
         {
             lblID.Content = simpleTask.id;
@@ -108,8 +116,10 @@ namespace WorkTaskOrganizer
 
         #endregion
 
+        #region SLOTS
 
-        #region slots
+        #region SLOTS.BUTTON
+
         private void btnApply_Click(object sender, RoutedEventArgs e)
         {
             simpleTask = new TaskTemplate();
@@ -151,16 +161,23 @@ namespace WorkTaskOrganizer
                 simpleTask.format = "E1";
             else if (rbTaskFormatE2.IsChecked.Equals(true))
                 simpleTask.format = "E2";
-            else if (rbTaskFormatAnother.IsChecked.Equals(true))
-                if(!String.IsNullOrEmpty(tbxFormatAnother.Text))
+            else
+            {
+                if (!String.IsNullOrEmpty(tbxFormatAnother.Text))
                 {
                     simpleTask.format = tbxFormatAnother.Text;
                 }
                 else
                 {
-                    MessageBox.Show("Empty field:\nFormat -> Another");
-                    return;
+                    if (CustomMessageBox.Show(CustomMesageBoxTypes.Alert, $"Empty field:\nFormat -> Another\n\nFill with default value? ({defaultAnotherFormat})"))
+                    {
+                        tbxFormatAnother.Text = defaultAnotherFormat;
+                        simpleTask.format = defaultAnotherFormat;
+                    }
+                    else
+                        return;
                 }
+            }
             #endregion
 
             #region Task name filling
@@ -168,8 +185,13 @@ namespace WorkTaskOrganizer
                 simpleTask.taskName = tbxTaskName.Text;
             else
             {
-                MessageBox.Show("Empty field:\nTask name");
-                return;
+                if (CustomMessageBox.Show(CustomMesageBoxTypes.Alert, $"Empty field:\nTask name\n\nFill with default value? ({defaultTaskName})"))
+                {
+                    tbxTaskName.Text = defaultTaskName;
+                    simpleTask.taskName = defaultTaskName;
+                }
+                else
+                    return;
             }
             #endregion
 
@@ -178,8 +200,13 @@ namespace WorkTaskOrganizer
                 simpleTask.linkToJira = tbxLinkToJira.Text;
             else
             {
-                MessageBox.Show("Empty field:\nLink to jira");
-                return;
+                if (CustomMessageBox.Show(CustomMesageBoxTypes.Alert, $"Empty field:\nLink to jira\n\nFill with default value? ({defaultLinkToJira})"))
+                {
+                    tbxLinkToJira.Text = defaultLinkToJira;
+                    simpleTask.linkToJira = defaultLinkToJira;
+                }
+                else
+                    return;
             }
             #endregion
 
@@ -188,8 +215,13 @@ namespace WorkTaskOrganizer
                 simpleTask.catalogName = tbxCatalogName.Text;
             else
             {
-                MessageBox.Show("Empty field:\nCatalog name");
-                return;
+                if (CustomMessageBox.Show(CustomMesageBoxTypes.Alert, $"Empty field:\nCatalog name\n\nFill with default value? ({defaultCatalogName})"))
+                {
+                    tbxCatalogName.Text = defaultCatalogName;
+                    simpleTask.catalogName = defaultCatalogName;
+                }
+                else
+                    return;
             }
             #endregion
 
@@ -210,8 +242,13 @@ namespace WorkTaskOrganizer
                 simpleTask.catalogPath = tbxCatalogPath.Text;
             else
             {
-                MessageBox.Show("Empty field:\nCatalog path");
-                return;
+                if (CustomMessageBox.Show(CustomMesageBoxTypes.Alert, $"Empty field:\nCatalog path\n\nFill with default value? ({defaultCatalogPath})"))
+                {
+                    tbxCatalogPath.Text = defaultCatalogPath;
+                    simpleTask.catalogPath = defaultCatalogPath;
+                }
+                else
+                    return;
             }
             #endregion 
 
@@ -233,31 +270,11 @@ namespace WorkTaskOrganizer
                 tbxCatalogName.Text = DateTime.Now.ToString("yyyy-MM-dd") + " (" + tbxTaskName.Text + ")";
         }
 
-        private void rbTaskFormat_Checked(object sender, RoutedEventArgs e)
-        {
-            if (rbTaskFormatE1.IsChecked.Equals(true))
-                tbxFormatAnother.IsEnabled = false;
-            else if (rbTaskFormatE2.IsChecked.Equals(true))
-                tbxFormatAnother.IsEnabled = false;
-            else if (rbTaskFormatAnother.IsChecked.Equals(true))
-                tbxFormatAnother.IsEnabled = true;
-        }
-
-        private void window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            base.OnMouseLeftButtonDown(e);
-            this.DragMove();
-        }
-        #endregion
-
-
-
-
         private void btnCatalogPathAuto_Click(object sender, RoutedEventArgs e)
         {
             if (!String.IsNullOrEmpty(tbxCatalogName.Text))
             {
-                tbxCatalogPath.Text = sc.SearchInFile("Workspace path");
+                tbxCatalogPath.Text = IOScripts.SearchInFile("Workspace path", configFileName);
 
                 tbxCatalogPath.Text += "\\" + tbxCatalogName.Text;
 
@@ -271,17 +288,56 @@ namespace WorkTaskOrganizer
                         }
                         else
                         {
-                            MessageBox.Show("Catalog:\n" + tbxCatalogPath.Text + "\nalredy exists!");
+                            CustomMessageBox.Show(CustomMesageBoxTypes.Error, $"Catalog:\n{tbxCatalogPath.Text}\nalredy exists!");
                         }
 
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Can not to create catalog\n\n" + ex.Message);
+                        CustomMessageBox.Show(CustomMesageBoxTypes.Error, $"Can not to create catalog\n\n{ex.Message}");
                     }
                 }
             }
         }
+
+        #endregion
+
+        #region SLOTS.RADIOBUTTON
+
+        private void rbTaskFormat_Checked(object sender, RoutedEventArgs e)
+        {
+            if (rbTaskFormatE1.IsChecked.Equals(true))
+                tbxFormatAnother.IsEnabled = false;
+            else if (rbTaskFormatE2.IsChecked.Equals(true))
+                tbxFormatAnother.IsEnabled = false;
+            else if (rbTaskFormatAnother.IsChecked.Equals(true))
+                tbxFormatAnother.IsEnabled = true;
+        }
+
+        #endregion
+
+        #region SLOTS.WINDOW
+
+        private void window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+            this.DragMove();
+        }
+
+        #endregion
+
+        #region SLOTS.TEXTBOX
+
+        private void tbxComent_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            string tmpValue = tbxComent.Text;
+            CustomMessageBox.Show(CustomMesageBoxTypes.Edit, ref tmpValue);
+            tbxComent.Text = tmpValue;
+        }
+
+        #endregion
+
+        #endregion
 
 
     }

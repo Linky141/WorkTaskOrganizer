@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkTaskOrganizer", "WorkTaskOrganizer\WorkTaskOrganizer.csproj", "{6AB294F7-DAEA-4559-AF8A-CF8612F22382}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkTaskOrganizer.Tests", "WorkTaskOrganizer.Tests\WorkTaskOrganizer.Tests.csproj", "{520245C9-FCB2-4A79-AF9A-8CD4D33F39F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6AB294F7-DAEA-4559-AF8A-CF8612F22382}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AB294F7-DAEA-4559-AF8A-CF8612F22382}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AB294F7-DAEA-4559-AF8A-CF8612F22382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520245C9-FCB2-4A79-AF9A-8CD4D33F39F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520245C9-FCB2-4A79-AF9A-8CD4D33F39F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520245C9-FCB2-4A79-AF9A-8CD4D33F39F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520245C9-FCB2-4A79-AF9A-8CD4D33F39F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

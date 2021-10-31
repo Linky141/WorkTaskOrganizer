@@ -44,7 +44,7 @@
             </DataGrid.ItemContainerStyle>
 
         </DataGrid>
-        <TextBox IsReadOnly="True" x:Name="tbxComment" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10,42,10,0" TextWrapping="NoWrap" Text="" Grid.Column="1"/>
+        <TextBox IsReadOnly="True" x:Name="tbxComment" MouseDoubleClick="tbxComment_MouseDoubleClick" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10,42,10,0" TextWrapping="NoWrap" Text="" Grid.Column="1"/>
         <ListBox x:Name="lbxWorkingTime" HorizontalAlignment="Left" Height="84" Margin="2,63,0,0" VerticalAlignment="Top" Width="478" Grid.Column="1" Grid.Row="1"/>
         <Button Content="Open URL" Padding="0,0,0,0" x:Name="btnOpenLinkToJira" HorizontalAlignment="Left" Margin="185,10,0,0" VerticalAlignment="Top" Width="76" Click="btnOpenLinkToJira_Click" Height="24" Grid.Column="1" Grid.Row="1"/>
         <TextBox IsReadOnly="True" x:Name="tbxLinkToJira" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1" Grid.Row="1"/>

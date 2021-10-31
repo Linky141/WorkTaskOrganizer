@@ -10,17 +10,36 @@ namespace WorkTaskOrganizer
 {
     public class WorkProjectPrerioid
     {
-        public WorkProjectPrerioid()
-        {
-            this.startWork = DateTime.MinValue;
-            this.endWork = DateTime.MinValue;
-        }
+        #region VARIABLES
 
-
-
+        public DateTime dateWork { get; set; }
         public DateTime startWork { get; set; }
         public DateTime endWork { get; set; }
 
+        public bool startWorkHourHasValue;
+        public bool startWorkMinsHasValue;
+        public bool endWorkHourHasValue;
+        public bool endWorkMinsHasValue;
+
+        #endregion
+
+        #region CONSTRUCTOR
+
+        public WorkProjectPrerioid()
+        {
+            this.dateWork = DateTime.MinValue;
+            this.startWork = DateTime.MinValue;
+            this.endWork = DateTime.MinValue;
+
+            this.startWorkHourHasValue = false;
+            this.startWorkMinsHasValue = false;
+            this.endWorkHourHasValue = false;
+            this.endWorkMinsHasValue = false;
+        }
+
+        #endregion
+
+        #region METHODS
 
         public int getPrerioidHours()
         {
@@ -32,7 +51,7 @@ namespace WorkTaskOrganizer
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                CustomMessageBox.Show(CustomMesageBoxTypes.Error, exc.Message);
                 timePreriod = 0;
             }
             return timePreriod;
@@ -48,7 +67,7 @@ namespace WorkTaskOrganizer
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                CustomMessageBox.Show(CustomMesageBoxTypes.Error, exc.Message);
                 timePreriod = 0;
             }
             return timePreriod;
@@ -60,9 +79,15 @@ namespace WorkTaskOrganizer
             else return false;
         }
 
+        public bool CheckPrerioidHasValue()
+        {
+            if (!startWork.Equals(DateTime.MinValue) || !endWork.Equals(DateTime.MinValue)) return true;
+            else return false;
+        }
+
         public override string ToString()
         {
-            string date = startWork.ToString("dd-MM-yyyy");
+            string date = dateWork.ToString("dd-MM-yyyy");
             string time1 = "";
             string time2 = "";
 
@@ -86,7 +111,7 @@ namespace WorkTaskOrganizer
                 }
                 catch (Exception exc)
                 {
-                    MessageBox.Show(exc.Message);
+                    CustomMessageBox.Show(CustomMesageBoxTypes.Error, exc.Message);
                     timePreriod = " (ERR)";
                 }
             }
@@ -95,5 +120,80 @@ namespace WorkTaskOrganizer
 
             return date +": "+ time1 + " - " + time2 + timePreriod;
         }
+
+        #region GET/SET
+
+        public void SetStartDate(DateTime date)
+        {
+            this.startWork = date;
+                this.startWorkHourHasValue = true;
+                this.startWorkMinsHasValue = true;
+
+        }
+
+        public void ClearStartDate()
+        {
+            this.startWork = new DateTime();
+            this.startWorkHourHasValue = false;
+            this.startWorkMinsHasValue = false;
+        }
+
+        public void SetEndDate(DateTime date)
+        {
+            this.endWork = date;
+                this.endWorkHourHasValue = true;
+                this.endWorkMinsHasValue = true;
+        }
+
+        public void ClearEndDate()
+        {
+            this.endWork = new DateTime();
+            this.endWorkHourHasValue = false;
+            this.endWorkMinsHasValue = false;
+        }
+
+        public void SetWorkDate(DateTime date)
+        {
+            this.dateWork = date;
+        }
+
+        public DateTime GetStartDate()
+        {
+            return this.startWork;
+        }
+
+        public DateTime GetEndDate()
+        {
+            return this.endWork;
+        }
+
+        public DateTime GetDate()
+        {
+            return this.dateWork;
+        }
+
+        public bool GetStartWorkHourHasValue()
+        {
+            return startWorkHourHasValue;
+        }
+
+        public bool GetStartWorkMinsHasValue()
+        {
+            return startWorkMinsHasValue;
+        }
+
+        public bool GetEndWorkHourHasValue()
+        {
+            return endWorkHourHasValue;
+        }
+
+        public bool GetEndWorkMinsHasValue()
+        {
+            return endWorkMinsHasValue;
+        }
+
+        #endregion
+
+        #endregion
     }
 }

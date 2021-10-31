@@ -66,16 +66,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CustomMesageBoxTypes.cs" />
+    <Compile Include="CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewTaskForm.xaml.cs">
       <DependentUpon>NewTaskForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="scripts.cs" />
+    <Compile Include="IOScripts.cs" />
     <Compile Include="SumTimeRound.cs" />
     <Compile Include="TaskTemplate.cs" />
     <Compile Include="WorkProjectPrerioid.cs" />
     <Compile Include="WorkTimeWindow.xaml.cs">
       <DependentUpon>WorkTimeWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="CustomMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

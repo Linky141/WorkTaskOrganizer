@@ -2,397 +2,119 @@
 <ArrayOfTaskTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <TaskTemplate>
     <id>1</id>
-    <status>Question to PM</status>
+    <status>Not started</status>
     <format>E2</format>
-    <taskName>Task1</taskName>
-    <comment>asdasdasdasdasdddfg
-gd
-g
-d
-gfddg</comment>
-    <linkToJira>asdasd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>2</priority>
-    <catalogName>2020-12-06 (Task1)</catalogName>
-    <catalogPath>C:\Windows\</catalogPath>
-    <workTime>
-      <WorkProjectPrerioid>
-        <startWork>2021-02-09T03:10:00</startWork>
-        <endWork>2021-02-09T04:15:00</endWork>
-      </WorkProjectPrerioid>
-    </workTime>
+    <taskName>111111111</taskName>
+    <comment>1111111111111111</comment>
+    <linkToJira>111111111111111</linkToJira>
+    <createdDate>2021-10-31T00:00:00</createdDate>
+    <deadline>2021-10-31T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>11111111111</catalogName>
+    <catalogPath>1111111111111111111</catalogPath>
+    <workTime />
   </TaskTemplate>
   <TaskTemplate>
     <id>2</id>
-    <status>Closed</status>
+    <status>Not started</status>
     <format>E2</format>
-    <taskName>Task2</taskName>
-    <comment>adasdasd
-
-elo
-as
-das
-d
-asd
-as
-d</comment>
-    <linkToJira>asdasdasdasd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>1</priority>
-    <catalogName>2020-12-06 (Task2)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\2020-12-06 (Task2)</catalogPath>
+    <taskName>22222222222</taskName>
+    <comment>22222222222</comment>
+    <linkToJira>22222222222</linkToJira>
+    <createdDate>2021-10-31T00:00:00</createdDate>
+    <deadline>2021-10-31T00:00:00</deadline>
+    <priority>3</priority>
+    <catalogName>22222222222</catalogName>
+    <catalogPath>22222222222</catalogPath>
     <workTime>
       <WorkProjectPrerioid>
-        <startWork>2021-02-09T01:05:00</startWork>
-        <endWork>2021-02-09T19:10:00</endWork>
+        <startWorkHourHasValue>true</startWorkHourHasValue>
+        <startWorkMinsHasValue>true</startWorkMinsHasValue>
+        <endWorkHourHasValue>true</endWorkHourHasValue>
+        <endWorkMinsHasValue>true</endWorkMinsHasValue>
+        <dateWork>2021-10-31T00:00:00</dateWork>
+        <startWork>2021-10-31T00:00:00</startWork>
+        <endWork>2021-10-31T00:05:00</endWork>
+      </WorkProjectPrerioid>
+      <WorkProjectPrerioid>
+        <startWorkHourHasValue>true</startWorkHourHasValue>
+        <startWorkMinsHasValue>true</startWorkMinsHasValue>
+        <endWorkHourHasValue>true</endWorkHourHasValue>
+        <endWorkMinsHasValue>true</endWorkMinsHasValue>
+        <dateWork>2021-10-31T00:00:00</dateWork>
+        <startWork>2021-10-31T00:00:00</startWork>
+        <endWork>2021-10-31T03:15:00</endWork>
       </WorkProjectPrerioid>
     </workTime>
   </TaskTemplate>
   <TaskTemplate>
     <id>3</id>
-    <status>Open</status>
-    <format>E2</format>
-    <taskName>dasdasdasd</taskName>
-    <comment>siema
-no elo
-xD</comment>
-    <linkToJira>sadsdasdas</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
+    <status>Not started</status>
+    <format>333333333333333</format>
+    <taskName>333333333333333</taskName>
+    <comment>test3 abcde</comment>
+    <linkToJira>333333333333333</linkToJira>
+    <createdDate>2021-10-31T00:00:00</createdDate>
+    <deadline>2021-10-31T00:00:00</deadline>
     <priority>3</priority>
-    <catalogName>2020-12-06 (dasdasdasd)</catalogName>
-    <catalogPath />
-    <workTime>
-      <WorkProjectPrerioid>
-        <startWork>2020-12-06T10:15:00</startWork>
-        <endWork>2020-12-06T11:10:00</endWork>
-      </WorkProjectPrerioid>
-      <WorkProjectPrerioid>
-        <startWork>2020-12-06T02:00:00</startWork>
-        <endWork>2020-12-06T20:35:00</endWork>
-      </WorkProjectPrerioid>
-    </workTime>
+    <catalogName>333333333333333</catalogName>
+    <catalogPath>333333333333333</catalogPath>
+    <workTime />
   </TaskTemplate>
   <TaskTemplate>
     <id>4</id>
-    <status>On tests</status>
-    <format>E1</format>
-    <taskName>test worktime</taskName>
-    <comment>vcvbcbvbvxcxcbvxcbvb
-hehe
-no</comment>
-    <linkToJira>asddupa</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
+    <status>Not started</status>
+    <format>44444444444444444</format>
+    <taskName>444444444</taskName>
+    <comment>44444444444444</comment>
+    <linkToJira>444444444</linkToJira>
+    <createdDate>2021-10-31T00:00:00</createdDate>
+    <deadline>2021-10-31T00:00:00</deadline>
     <priority>3</priority>
-    <catalogName>2020-12-06 (test worktime)</catalogName>
-    <catalogPath />
-    <workTime>
-      <WorkProjectPrerioid>
-        <startWork>2020-12-06T02:10:00</startWork>
-        <endWork>2020-12-06T03:15:00</endWork>
-      </WorkProjectPrerioid>
-      <WorkProjectPrerioid>
-        <startWork>2020-12-06T02:10:00</startWork>
-        <endWork>0001-01-01T00:00:00</endWork>
-      </WorkProjectPrerioid>
-    </workTime>
+    <catalogName>444444444444</catalogName>
+    <catalogPath>4444444444444444444</catalogPath>
+    <workTime />
   </TaskTemplate>
   <TaskTemplate>
     <id>5</id>
     <status>Not started</status>
-    <format>E2</format>
-    <taskName>nowe</taskName>
-    <comment>asd</comment>
-    <linkToJira>asdasd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
+    <format />
+    <taskName />
+    <comment />
+    <linkToJira />
+    <createdDate>2021-10-31T00:00:00</createdDate>
+    <deadline>2021-10-31T00:00:00</deadline>
     <priority>3</priority>
-    <catalogName>2020-12-06 (nowe)</catalogName>
+    <catalogName />
     <catalogPath />
     <workTime />
   </TaskTemplate>
   <TaskTemplate>
     <id>6</id>
     <status>Not started</status>
-    <format>E2</format>
-    <taskName>Test xD</taskName>
-    <comment>sdfsdf
-hełehehe</comment>
-    <linkToJira>sdf</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
+    <format />
+    <taskName>UNNAMED_TASK</taskName>
+    <comment />
+    <linkToJira>NO_LINK_TO_JIRA</linkToJira>
+    <createdDate>2021-10-31T00:00:00</createdDate>
+    <deadline>2021-10-31T00:00:00</deadline>
     <priority>3</priority>
-    <catalogName>2020-12-06 (sdf)</catalogName>
-    <catalogPath />
+    <catalogName>NO_CATALOG_NAME</catalogName>
+    <catalogPath>NO_CATALOG_PATH</catalogPath>
     <workTime />
   </TaskTemplate>
   <TaskTemplate>
     <id>7</id>
-    <status>Reload on prod</status>
-    <format>E2</format>
-    <taskName>Task3</taskName>
-    <comment>aaaa</comment>
-    <linkToJira>sfd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2020-12-06 (Task3)</catalogName>
-    <catalogPath />
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>8</id>
-    <status>Question to PM</status>
-    <format>E2</format>
-    <taskName>task4</taskName>
-    <comment />
-    <linkToJira>asd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2020-12-06 (task4)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2020-12-06 (task4)</catalogPath>
-    <workTime>
-      <WorkProjectPrerioid>
-        <startWork>0001-01-01T00:00:00</startWork>
-        <endWork>2021-10-24T03:20:00</endWork>
-      </WorkProjectPrerioid>
-      <WorkProjectPrerioid>
-        <startWork>2021-10-24T06:25:00</startWork>
-        <endWork>2021-10-24T06:30:00</endWork>
-      </WorkProjectPrerioid>
-    </workTime>
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>9</id>
     <status>Not started</status>
-    <format>E1</format>
-    <taskName>aaaa</taskName>
+    <format>?</format>
+    <taskName>UNNAMED_TASK</taskName>
     <comment />
-    <linkToJira>aaaaa</linkToJira>
-    <createdDate>2020-12-07T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>4</priority>
-    <catalogName>2020-12-06 (aaaa)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2020-12-06 (aaaa)</catalogPath>
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>10</id>
-    <status>Not started</status>
-    <format>E2</format>
-    <taskName>bbbb</taskName>
-    <comment>gfngnfgnfgn vbasdasdasd</comment>
-    <linkToJira>bbbb</linkToJira>
-    <createdDate>2020-12-08T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>5</priority>
-    <catalogName>2020-12-06 (bbbb)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2020-12-06 (bbbb)</catalogPath>
-    <workTime>
-      <WorkProjectPrerioid>
-        <startWork>2021-10-24T00:00:00</startWork>
-        <endWork>2021-10-24T00:05:00</endWork>
-      </WorkProjectPrerioid>
-    </workTime>
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>11</id>
-    <status>Not started</status>
-    <format>E1</format>
-    <taskName>cccc</taskName>
-    <comment />
-    <linkToJira>ccccc</linkToJira>
-    <createdDate>2020-12-09T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>2</priority>
-    <catalogName>2020-12-06 (cccc)</catalogName>
-    <catalogPath />
-    <workTime>
-      <WorkProjectPrerioid>
-        <startWork>2021-10-24T03:15:00</startWork>
-        <endWork>2021-10-24T02:10:00</endWork>
-      </WorkProjectPrerioid>
-    </workTime>
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>12</id>
-    <status>Not started</status>
-    <format>E1</format>
-    <taskName>NOT STARTED</taskName>
-    <comment />
-    <linkToJira>adsasd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-23T00:00:00</deadline>
-    <priority>1</priority>
-    <catalogName>2020-12-06 (NOT STARTED)</catalogName>
-    <catalogPath />
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>13</id>
-    <status>On tests</status>
-    <format>E2</format>
-    <taskName>OPEN</taskName>
-    <comment />
-    <linkToJira>asd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-10T00:00:00</deadline>
+    <linkToJira>NO_LINK_TO_JIRA</linkToJira>
+    <createdDate>2021-10-31T00:00:00</createdDate>
+    <deadline>2021-10-31T00:00:00</deadline>
     <priority>3</priority>
-    <catalogName>2020-12-06 (OPEN)</catalogName>
-    <catalogPath />
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>14</id>
-    <status>Closed</status>
-    <format>E2</format>
-    <taskName>Close</taskName>
-    <comment />
-    <linkToJira>asasdasd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2020-12-06 (Close)</catalogName>
-    <catalogPath />
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>15</id>
-    <status>Closed</status>
-    <format>E2</format>
-    <taskName>Question</taskName>
-    <comment />
-    <linkToJira>asdasdasd</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-06T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2020-12-06 (Question)</catalogName>
-    <catalogPath />
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>16</id>
-    <status>On tests</status>
-    <format>E1</format>
-    <taskName>TEST</taskName>
-    <comment>d</comment>
-    <linkToJira>d</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-09T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>asd</catalogName>
-    <catalogPath />
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>17</id>
-    <status>Reload on prod</status>
-    <format>E2</format>
-    <taskName>Reload</taskName>
-    <comment />
-    <linkToJira>sadfsdf</linkToJira>
-    <createdDate>2020-12-06T00:00:00</createdDate>
-    <deadline>2020-12-16T00:00:00</deadline>
-    <priority>1</priority>
-    <catalogName>2020-12-06 (Reload)</catalogName>
-    <catalogPath />
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>18</id>
-    <status>Not started</status>
-    <format>E1</format>
-    <taskName>Test create catalog</taskName>
-    <comment />
-    <linkToJira>asdasdasdasd</linkToJira>
-    <createdDate>2020-12-08T00:00:00</createdDate>
-    <deadline>2020-12-08T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2020-12-08 (Test create catalog)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2020-12-08 (Test create catalog)</catalogPath>
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>19</id>
-    <status>Not started</status>
-    <format>E1</format>
-    <taskName>EDIPL-12345</taskName>
-    <comment />
-    <linkToJira>www.google.pl</linkToJira>
-    <createdDate>2020-12-08T00:00:00</createdDate>
-    <deadline>2020-12-08T00:00:00</deadline>
-    <priority>2</priority>
-    <catalogName>2020-12-08 (EDIPL-12345)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2020-12-08 (EDIPL-12345)</catalogPath>
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>20</id>
-    <status>Not started</status>
-    <format>sdfsdf</format>
-    <taskName>asd</taskName>
-    <comment />
-    <linkToJira>asd</linkToJira>
-    <createdDate>2021-02-08T00:00:00</createdDate>
-    <deadline>2021-02-08T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2021-02-08 (asd)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2021-02-08 (asd)</catalogPath>
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>21</id>
-    <status>Not started</status>
-    <format>E2</format>
-    <taskName>sdf</taskName>
-    <comment>sdfsdf</comment>
-    <linkToJira>sdfsd</linkToJira>
-    <createdDate>2021-10-24T00:00:00</createdDate>
-    <deadline>2021-10-24T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2021-10-24 (sdf)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2021-10-24 (sdf)</catalogPath>
-    <workTime />
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>22</id>
-    <status>On tests</status>
-    <format>E2</format>
-    <taskName>aa</taskName>
-    <comment />
-    <linkToJira>a</linkToJira>
-    <createdDate>2021-10-24T00:00:00</createdDate>
-    <deadline>2021-10-24T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2021-10-24 (aa)</catalogName>
-    <catalogPath>C:\Users\Tomasz Bielas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\TestWorkspace\2021-10-24 (aa)</catalogPath>
-    <workTime>
-      <WorkProjectPrerioid>
-        <startWork>2021-10-24T03:10:00</startWork>
-        <endWork>0001-01-01T00:00:00</endWork>
-      </WorkProjectPrerioid>
-      <WorkProjectPrerioid>
-        <startWork>2021-10-24T00:00:00</startWork>
-        <endWork>2021-10-24T00:15:00</endWork>
-      </WorkProjectPrerioid>
-    </workTime>
-  </TaskTemplate>
-  <TaskTemplate>
-    <id>23</id>
-    <status>Not started</status>
-    <format>E2</format>
-    <taskName>asd</taskName>
-    <comment />
-    <linkToJira>asd</linkToJira>
-    <createdDate>2021-10-25T00:00:00</createdDate>
-    <deadline>2021-10-25T00:00:00</deadline>
-    <priority>3</priority>
-    <catalogName>2021-10-25 (asd)</catalogName>
-    <catalogPath>C:\Users\tomas\Desktop\Nowyfolder\2021-10-25 (asd)</catalogPath>
+    <catalogName>NO_CATALOG_NAME</catalogName>
+    <catalogPath>NO_CATALOG_PATH</catalogPath>
     <workTime />
   </TaskTemplate>
 </ArrayOfTaskTemplate>

@@ -39,7 +39,7 @@
             <Label Content="Link to Jira" HorizontalAlignment="Left" Margin="131,64,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="tbxLinkToJira" HorizontalAlignment="Left" Height="23" Margin="131,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290"/>
             <Label Content="Comment" HorizontalAlignment="Left" Margin="426,5,0,0" VerticalAlignment="Top" Height="33"/>
-            <TextBox x:Name="tbxComent"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" HorizontalAlignment="Left" Height="311" Margin="426,30,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="359"/>
+            <TextBox x:Name="tbxComent"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" HorizontalAlignment="Left" Height="311" Margin="426,30,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="359" MouseDoubleClick="tbxComent_MouseDoubleClick"/>
             <Label Content="Catalog name" HorizontalAlignment="Left" Margin="131,122,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="tbxCatalogName" HorizontalAlignment="Left" Height="23" Margin="131,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290"/>
             <DatePicker x:Name="calCreationDate" HorizontalAlignment="Left" Margin="128,260,0,0" VerticalAlignment="Top"/>

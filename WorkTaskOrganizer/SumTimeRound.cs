@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorkTaskOrganizer
 {
-    class SumTimeRound
+    public class SumTimeRound
     {
         int min=0;
         public void AddMin(int val) { this.min += val; }
@@ -28,7 +28,5 @@ namespace WorkTaskOrganizer
             int hours = (int)min / 60;
             return (int)(min - (hours*60));
         }
-
-
     }
 }

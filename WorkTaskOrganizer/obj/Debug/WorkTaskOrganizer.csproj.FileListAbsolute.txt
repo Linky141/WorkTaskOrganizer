@@ -50,3 +50,5 @@ C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOr
 C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.CopyComplete
 C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.exe
 C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.pdb
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\CustomMessageBox.g.cs
+C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\CustomMessageBox.baml

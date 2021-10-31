@@ -13,26 +13,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkTaskOrganizer"
         mc:Ignorable="d"
-        Title="WorkTimeWindow" Height="468.594" Width="388.141" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        Title="WorkTimeWindow" Height="950" Width="388.141" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
         Background="Transparent" AllowsTransparency="True" WindowStyle="None" Mouse.MouseDown="window_MouseDown">
     <Border Background="{DynamicResource MaterialDesignPaper}" CornerRadius="10" BorderThickness="1" BorderBrush="#eeee">
-    <Grid>
-        <Label Content="Work date" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbxStartHour" SelectionChanged="lbxStartHour_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="10,127,0,0" VerticalAlignment="Top" Width="77"/>
-        <ListBox x:Name="lbxStartMinute" SelectionChanged="lbxStartMinute_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="92,127,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label Content="Hour" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
-        <Label Content="Minute" HorizontalAlignment="Left" Margin="92,96,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="10,421,0,0" VerticalAlignment="Top" Width="183" Click="btnOk_Click" Style="{StaticResource MaterialDesignFlatButton}"/>
-            <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="198,421,0,0" VerticalAlignment="Top" Width="179" Click="btnCancel_Click" Style="{StaticResource MaterialDesignFlatAccentButton}"/>
-        <ListBox x:Name="lbxEndHour" SelectionChanged="lbxEndHour_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="198,127,0,0" VerticalAlignment="Top" Width="77"/>
-        <ListBox x:Name="lbxEndMinute" SelectionChanged="lbxEndMinute_SelectionChanged" HorizontalAlignment="Left" Height="282" Margin="300,127,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label Content="Hour" HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top"/>
-        <Label Content="Minute" HorizontalAlignment="Left" Margin="300,96,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.576,0.706"/>
-        <Label x:Name="lblPreview" Content="---" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top"/>
-        <DatePicker SelectedDateChanged="calStartWork_SelectedDateChanged" x:Name="calStartWork" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="367"/>
-        <Label Content="Start" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
-        <Label Content="End" HorizontalAlignment="Left" Margin="198,70,0,0" VerticalAlignment="Top"/>
+        <Grid>
+            <Label Content="Work date" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <ListBox x:Name="lbxStartHour" SelectionChanged="lbxStartHour_SelectionChanged" HorizontalAlignment="Left" Height="774" Margin="10,127,0,0" VerticalAlignment="Top" Width="77"/>
+            <ListBox x:Name="lbxStartMinute" SelectionChanged="lbxStartMinute_SelectionChanged" HorizontalAlignment="Left" Height="774" Margin="92,127,0,0" VerticalAlignment="Top" Width="77"/>
+            <Label Content="Hour" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
+            <Label Content="Minute" HorizontalAlignment="Left" Margin="92,96,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="9,906,0,0" VerticalAlignment="Top" Width="183" Click="btnOk_Click" Style="{StaticResource MaterialDesignFlatButton}"/>
+            <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="197,906,0,0" VerticalAlignment="Top" Width="179" Click="btnCancel_Click" Style="{StaticResource MaterialDesignFlatAccentButton}"/>
+            <ListBox x:Name="lbxEndHour" SelectionChanged="lbxEndHour_SelectionChanged" HorizontalAlignment="Left" Height="774" Margin="198,127,0,0" VerticalAlignment="Top" Width="77"/>
+            <ListBox x:Name="lbxEndMinute" SelectionChanged="lbxEndMinute_SelectionChanged" HorizontalAlignment="Left" Height="774" Margin="300,127,0,0" VerticalAlignment="Top" Width="77"/>
+            <Label Content="Hour" HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top"/>
+            <Label Content="Minute" HorizontalAlignment="Left" Margin="300,96,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.576,0.706"/>
+            <Label x:Name="lblPreview" Content="---" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top"/>
+            <DatePicker SelectedDateChanged="calStartWork_SelectedDateChanged" x:Name="calStartWork" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="367"/>
+            <Label Content="Start" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
+            <Label Content="End" HorizontalAlignment="Left" Margin="198,70,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btnStartClear" Content="clear" HorizontalAlignment="Left" Margin="49,71,0,0" VerticalAlignment="Top" Width="120" Height="23" Style="{StaticResource MaterialDesignFlatAccentButton}" Click="btnStartClear_Click"/>
+            <Button x:Name="btnEndClear" Content="clear" HorizontalAlignment="Left" Margin="233,71,0,0" VerticalAlignment="Top" Width="120" Height="23"  Style="{StaticResource MaterialDesignFlatAccentButton}" Click="btnEndClear_Click"/>
 
-    </Grid>
+        </Grid>
     </Border>
 </Window>
