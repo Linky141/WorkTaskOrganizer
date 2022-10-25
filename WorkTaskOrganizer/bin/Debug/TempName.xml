@@ -63,7 +63,7 @@
   </TaskTemplate>
   <TaskTemplate>
     <id>4</id>
-    <status>Not started</status>
+    <status>Open</status>
     <format>44444444444444444</format>
     <taskName>444444444</taskName>
     <comment>44444444444444</comment>
@@ -91,8 +91,8 @@
   </TaskTemplate>
   <TaskTemplate>
     <id>6</id>
-    <status>Not started</status>
-    <format />
+    <status>Closed</status>
+    <format>?</format>
     <taskName>UNNAMED_TASK</taskName>
     <comment />
     <linkToJira>NO_LINK_TO_JIRA</linkToJira>

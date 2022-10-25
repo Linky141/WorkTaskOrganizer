@@ -1,4 +1,6 @@
 Workspace path:
-C:\Users\tomas\Desktop\Nowyfolder
+C:\Users\Tomasz\Documents\TestZlecenia\Projekty
 Default explorer:
-C:\Users\tomas\Desktop\Q-Dir_Portable\Q-Dir\Q-Dir.exe
+Explorer.exe
+Backup folder:
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\Backup

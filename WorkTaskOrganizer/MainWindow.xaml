@@ -55,8 +55,8 @@
         <Label Content="Time works:" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" FontFamily="Consolas" FontWeight="Bold"/>
         <Label x:Name="lblSumTimeWork" Content="" HorizontalAlignment="Left" Margin="97,39,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="1.875,0.438" FontFamily="Consolas" FontWeight="Bold"/>
         <Button x:Name="btnWorkTimeRemove" Content="Del" HorizontalAlignment="Left" Margin="423,152,0,0" VerticalAlignment="Top" Width="57" Click="btnWorkTimeRemove_Click" Grid.Column="1" Grid.Row="1"/>
-        <Label Content="Filtr" HorizontalAlignment="Left" Margin="203,193,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontStyle="Italic" FontFamily="Consolas"/>
-        <TextBox x:Name="tbxFiltrTaskName" HorizontalAlignment="Left" Height="23" Margin="164,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,1.87" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="Filtr" HorizontalAlignment="Left" Margin="209,189,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontStyle="Italic" FontFamily="Consolas" Width="43"/>
+        <TextBox x:Name="tbxFiltrTaskName" HorizontalAlignment="Left" Height="23" Margin="124,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,1.87" Grid.Column="1" Grid.Row="1"/>
         <Label Content="Status" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
         <Label Content="Priority" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
         <CheckBox x:Name="chkbxFiltrStatusNotStarted" Content="Not started" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
@@ -74,9 +74,9 @@
         <Button x:Name="btnFilterPrioritySelectAll" Padding="0,0,0,0"  Content="All" HorizontalAlignment="Left" Margin="64,337,0,0" VerticalAlignment="Top" Width="30" Click="btnFilterPrioritySelectAll_Click" Grid.Column="1" Grid.Row="1" Height="18"/>
         <Button x:Name="btnFiltrStatusClear" Content="Cls" Padding="0,0,0,0"  HorizontalAlignment="Left" Margin="91,209,0,0" VerticalAlignment="Top" Width="30" Click="btnFiltrStatusClear_Click" Grid.Column="1" Grid.Row="1" Height="18"/>
         <Button x:Name="btnFilterPriorityClear" Padding="0,0,0,0"  Content="Cls" HorizontalAlignment="Left" Margin="99,337,0,0" VerticalAlignment="Top" Width="30" Click="btnFilterPriorityClear_Click" Grid.Column="1" Grid.Row="1" Height="18"/>
-        <TextBox x:Name="tbxFiltrFormat" HorizontalAlignment="Left" Height="23" Margin="314,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="1"/>
-        <CheckBox x:Name="chkbxFiltrTaskName" Content="Task name" HorizontalAlignment="Left" Margin="164,224,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
-        <CheckBox x:Name="chkbxFiltrFormat" Content="Format" HorizontalAlignment="Left" Margin="314,224,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="tbxFiltrFormat" HorizontalAlignment="Left" Height="23" Margin="249,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="1"/>
+        <CheckBox x:Name="chkbxFiltrTaskName" Content="Task name" HorizontalAlignment="Left" Margin="124,218,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+        <CheckBox x:Name="chkbxFiltrFormat" Content="Format" HorizontalAlignment="Left" Margin="249,218,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
         <CheckBox x:Name="chkbxFiltrCreationDate" Content="Creation date" HorizontalAlignment="Left" Margin="202,282,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
         <CheckBox x:Name="chkbxFiltrDeadline" Content="Deadline" HorizontalAlignment="Left" Margin="203,366,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
         <DatePicker x:Name="calFilterCreationDateBegin" HorizontalAlignment="Left" Margin="202,303,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Width="100"/>
@@ -87,9 +87,9 @@
         <Label Content="To" HorizontalAlignment="Left" Margin="176,416,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
         <Label Content="From" HorizontalAlignment="Left" Margin="159,304,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
         <Label Content="To" HorizontalAlignment="Left" Margin="159,333,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
-        <Button x:Name="btnCancleFiltr" Content="Cancel" HorizontalAlignment="Left" Margin="375,371,0,0" VerticalAlignment="Top" Width="105" Click="btnCancleFiltr_Click" Grid.Column="1" Grid.Row="1"/>
-        <Button x:Name="btnClearFiltr" Content="Clear" HorizontalAlignment="Left" Margin="375,408,0,0" VerticalAlignment="Top" Width="105" Click="btnClearFiltr_Click" Grid.Column="1" Grid.Row="1"/>
-        <Button x:Name="btnFiltr" Content="Filter" HorizontalAlignment="Left" Margin="375,282,0,0" VerticalAlignment="Top" Width="105" Click="btnFiltr_Click" Grid.Column="1" Grid.Row="1" Height="84"/>
+        <Button x:Name="btnCancleFiltr" Content="Cancel" HorizontalAlignment="Left" Margin="375,334,0,0" VerticalAlignment="Top" Width="105" Click="btnCancleFiltr_Click" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="btnClearFiltr" Content="Clear" HorizontalAlignment="Left" Margin="375,371,0,0" VerticalAlignment="Top" Width="105" Click="btnClearFiltr_Click" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="btnFiltr" Content="Filter" HorizontalAlignment="Left" Margin="375,189,0,0" VerticalAlignment="Top" Width="105" Click="btnFiltr_Click" Grid.Column="1" Grid.Row="1" Height="66"/>
         <Button x:Name="btnFiltrCreationDateFromMax" Content="^" Padding="0,0,0,0" Grid.Column="1" HorizontalAlignment="Left" Margin="307,303,0,0" Grid.Row="1" VerticalAlignment="Top" Width="12" Height="25" Click="btnFiltrCreationDateFromMax_Click"/>
         <Button x:Name="btnFiltrCreationDateFromToday" Content="-" Padding="0,0,0,0" Grid.Column="1" HorizontalAlignment="Left" Margin="324,303,0,0" Grid.Row="1" VerticalAlignment="Top" Width="12" Height="25" Click="btnFiltrCreationDateFromToday_Click"/>
         <Button x:Name="btnFiltrCreationDateFromMin" Content="v" Padding="0,0,0,0" Grid.Column="1" HorizontalAlignment="Left" Margin="341,303,0,0" Grid.Row="1" VerticalAlignment="Top" Width="12" Height="25" Click="btnFiltrCreationDateFromMin_Click"/>
@@ -104,6 +104,9 @@
         <Button x:Name="btnFiltrDeadlineToMin" Content="v" Padding="0,0,0,0" Grid.Column="1" HorizontalAlignment="Left" Margin="342,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="12" Height="25" Click="btnFiltrDeadlineToMin_Click"/>
         <Button Content="Open path" Padding="0,0,0,0" x:Name="btnOpenCatalogPath" HorizontalAlignment="Left" Margin="405,10,0,0" VerticalAlignment="Top" Width="75" Click="btnOpenCatalogPath_Click" Height="24" Grid.Column="1" Grid.Row="1"/>
         <TextBox IsReadOnly="True" x:Name="tbxcatalogPath" HorizontalAlignment="Left" Height="24" Margin="266,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="btnShowAllNotClosed" Content="Not closed" Grid.Column="1" HorizontalAlignment="Left" Margin="375,297,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Click="btnShowAllNotClosed_Click" />
+        <Button x:Name="btnSearchByName" Content="By name" Grid.Column="1" HorizontalAlignment="Left" Margin="375,260,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Click="btnSearchByName_Click"  />
+        <Button x:Name="btnMakeBackup" Content="BACKUP" Grid.Column="1" HorizontalAlignment="Left" Margin="375,408,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Click="btnMakeBackup_Click"/>
 
     </Grid>
 </Window>

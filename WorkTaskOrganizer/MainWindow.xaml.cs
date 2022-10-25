@@ -30,7 +30,7 @@ namespace WorkTaskOrganizer
 
         public List<TaskTemplate> tasks = new List<TaskTemplate>();
         private bool searchingInDataGrid = false;
-        private string WindowName = "TaskWorkOrganizer v.2.2";
+        private string WindowName = "TaskWorkOrganizer v.2.3";
         private string configFileName = "Config.txt";
         private string tasksDataFile = "TempName.xml";
         int dataGridSelectedItemIndex = -1;
@@ -497,6 +497,67 @@ namespace WorkTaskOrganizer
             }
         }
 
+        private void btnSearchByName_Click(object sender, RoutedEventArgs e)
+        {
+            chkbxFiltrStatusNotStarted.IsChecked = true;
+            chkbxFiltrStatusOpen.IsChecked = true;
+            chkbxFiltrStatusClosed.IsChecked = true;
+            chkbxFiltrStatusQuestionToPM.IsChecked = true;
+            chkbxFiltrStatusOnTests.IsChecked = true;
+            chkbxFiltrStatusReloadOnProd.IsChecked = true;
+            chkbxFiltrPriority1.IsChecked = true;
+            chkbxFiltrPriority2.IsChecked = true;
+            chkbxFiltrPriority3.IsChecked = true;
+            chkbxFiltrPriority4.IsChecked = true;
+            chkbxFiltrPriority5.IsChecked = true;
+            chkbxFiltrTaskName.IsChecked = true;
+            chkbxFiltrFormat.IsChecked = false;
+            chkbxFiltrCreationDate.IsChecked = false;
+            chkbxFiltrDeadline.IsChecked = false;
+
+            string taskName = Clipboard.GetText();
+            if(String.IsNullOrEmpty(taskName))
+            {
+                tbxFiltrTaskName.Focus();
+            }
+            else
+            {
+                tbxFiltrTaskName.Text = taskName;
+                btnFiltr_Click(sender, e);
+            }
+            //tbxFiltrTaskName
+        }
+
+        private void btnShowAllNotClosed_Click(object sender, RoutedEventArgs e)
+        {
+            chkbxFiltrStatusNotStarted.IsChecked = true;
+            chkbxFiltrStatusOpen.IsChecked = true;
+            chkbxFiltrStatusClosed.IsChecked = false;
+            chkbxFiltrStatusQuestionToPM.IsChecked = true;
+            chkbxFiltrStatusOnTests.IsChecked = true;
+            chkbxFiltrStatusReloadOnProd.IsChecked = true;
+            chkbxFiltrPriority1.IsChecked = true;
+            chkbxFiltrPriority2.IsChecked = true;
+            chkbxFiltrPriority3.IsChecked = true;
+            chkbxFiltrPriority4.IsChecked = true;
+            chkbxFiltrPriority5.IsChecked = true;
+            chkbxFiltrTaskName.IsChecked = false;
+            chkbxFiltrFormat.IsChecked = false;
+            chkbxFiltrCreationDate.IsChecked = false;
+            chkbxFiltrDeadline.IsChecked = false;
+            btnFiltr_Click(sender, e);
+        }
+
+        private void btnMakeBackup_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            string backupPath = IOScripts.SearchInFile("Backup folder", configFileName);
+            string fileName = "BACKUP_" + now.Year + " - " + now.Month + " - " + now.Day + "T" + now.Hour + " - " + now.Minute + " - " + now.Second + ".XML";
+            backupPath += "\\" + fileName;
+            IOScripts.SerializeTaskTemplate(tasks, backupPath);
+            CustomMessageBox.Show(CustomMesageBoxTypes.Message, "Backup \"" + fileName + "\" was created in \n" + backupPath);
+        }
+
         #endregion
 
         #region SLOTS.DATAGRID
@@ -527,10 +588,12 @@ namespace WorkTaskOrganizer
             CustomMessageBox.Show(CustomMesageBoxTypes.Message, tbxComment.Text);
         }
 
+
+
         #endregion
 
         #endregion
 
-
+      
     }
 }

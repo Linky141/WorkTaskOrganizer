@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj": {}
+    "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj": {
+    "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj",
         "projectName": "WorkTaskOrganizer.Tests",
-        "projectPath": "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj",
-        "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\obj\\",
+        "projectPath": "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\WorkTaskOrganizer.Tests.csproj",
+        "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tomasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj": {
-                "projectPath": "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj"
+              "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj": {
+                "projectPath": "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj"
               }
             }
           }
@@ -80,15 +80,20 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj": {
+    "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj",
+        "projectUniqueName": "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj",
         "projectName": "WorkTaskOrganizer",
-        "projectPath": "C:\\Users\\tomas\\Documents\\Programowanie\\VisualStudio\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj"
+        "projectPath": "C:\\Users\\Tomasz\\Documents\\Inne\\Moje aplikacje\\Work organizer\\WorkTaskOrganizer\\WorkTaskOrganizer\\WorkTaskOrganizer.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "net472": {}

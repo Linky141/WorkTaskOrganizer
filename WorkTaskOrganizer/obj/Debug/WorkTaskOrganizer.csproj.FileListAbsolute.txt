@@ -52,3 +52,31 @@ C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOr
 C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.pdb
 C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\CustomMessageBox.g.cs
 C:\Users\tomas\Documents\Programowanie\VisualStudio\WorkTaskOrganizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\CustomMessageBox.baml
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\WorkTaskOrganizer.exe.config
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\WorkTaskOrganizer.exe
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\WorkTaskOrganizer.pdb
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignColors.dll
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.AssemblyReference.cache
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\CustomMessageBox.g.cs
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\MainWindow.g.cs
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\NewTaskForm.g.cs
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTimeWindow.g.cs
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\App.g.cs
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer_MarkupCompile.cache
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer_MarkupCompile.lref
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\App.baml
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\CustomMessageBox.baml
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\MainWindow.baml
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\NewTaskForm.baml
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTimeWindow.baml
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.g.resources
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.Properties.Resources.resources
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.GenerateResource.cache
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.CoreCompileInputs.cache
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.csproj.CopyComplete
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.exe
+C:\Users\Tomasz\Documents\Inne\Moje aplikacje\Work organizer\WorkTaskOrganizer\WorkTaskOrganizer\obj\Debug\WorkTaskOrganizer.pdb
